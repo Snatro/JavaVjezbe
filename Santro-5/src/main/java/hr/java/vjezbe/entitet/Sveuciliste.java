@@ -6,8 +6,8 @@ public class Sveuciliste<T> extends ObrazovnaUstanova{
 
     private List<T> obrazovneUstanove;
 
-    public Sveuciliste(String naziv, List<Predmet> predmeti, List<Profesor> profesori, List<Student> studenti, List<Ispit> ispiti, List<T> obrazovneUstanove) {
-        super(naziv, predmeti, profesori, studenti, ispiti);
+    public Sveuciliste(Long id,String naziv, List<Predmet> predmeti, List<Profesor> profesori, List<Student> studenti, List<Ispit> ispiti, List<T> obrazovneUstanove) {
+        super(id,naziv, predmeti, profesori, studenti, ispiti);
         this.obrazovneUstanove = obrazovneUstanove;
     }
 

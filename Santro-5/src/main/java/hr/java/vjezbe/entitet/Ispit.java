@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 /**
  * Sadrži varijable za objekt Ispit
  */
-public final class Ispit implements Online {
+public final class Ispit extends Entitet implements Online {
     private Predmet kolegij;
     private Student student;
     private Integer ocjena;
@@ -14,12 +14,17 @@ public final class Ispit implements Online {
     private Dvorana dvorana;
 
 
-    public Ispit(Predmet kolegij, Student student, Integer ocjena, LocalDateTime datumIVrijeme, Dvorana dvorana) {
+    public Ispit(Long id,Predmet kolegij, Student student, Integer ocjena, LocalDateTime datumIVrijeme, Dvorana dvorana) {
+        super(id);
         this.kolegij = kolegij;
         this.student = student;
         this.ocjena = ocjena;
         this.datumIVrijeme = datumIVrijeme;
         this.dvorana = dvorana;
+    }
+
+    public Ispit(Long id) {
+        super(id);
     }
 
     public Predmet getKolegij() {

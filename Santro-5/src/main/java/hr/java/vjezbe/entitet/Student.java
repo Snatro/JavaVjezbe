@@ -6,19 +6,19 @@ import java.util.Objects;
 /**
  * Sadrži gettere i settere Studenta
  */
-public class Student extends Osoba {
+public class Student extends Osoba{
 
     private String jmbag;
     private LocalDate datumRodenja;
 
-    public Student(String ime, String prezime, String jmbag, LocalDate datumRodenja) {
-        super(ime,prezime);
+    public Student(String ime, String prezime, String jmbag, LocalDate datumRodenja, Long id) {
+        super(ime,prezime,id);
         this.jmbag = jmbag;
         this.datumRodenja = datumRodenja;
     }
 
-    public Student(String ime, String prezime) {
-        super(ime, prezime);
+    public Student(String ime, String prezime,Long id) {
+        super(ime, prezime,id);
     }
 
     public String getJmbag() {

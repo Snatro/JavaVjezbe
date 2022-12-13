@@ -4,19 +4,24 @@ package hr.java.vjezbe.entitet;
 /**
  * Klasa za kolegije
  */
-public class Predmet {
+public class Predmet extends Entitet{
 
     private String sifra;
     private String naziv;
     private Integer brojEctsBodova;
     private Profesor nositelj;
 
-    public Predmet(String sifra, String naziv, Integer brojEctsBodova, Profesor nositelj) {
+    public Predmet(Long id,String sifra, String naziv, Integer brojEctsBodova, Profesor nositelj) {
+        super(id);
         this.sifra = sifra;
         this.naziv = naziv;
         this.brojEctsBodova = brojEctsBodova;
         this.nositelj = nositelj;
 
+    }
+
+    public Predmet(Long id) {
+        super(id);
     }
 
     public String getSifra() {

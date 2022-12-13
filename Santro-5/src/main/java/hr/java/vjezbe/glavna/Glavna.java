@@ -68,11 +68,11 @@ public class Glavna {
 
             switch(odabirUstanove) {
                 case(1):
-                    sveuciliste.dodajObrazovnuUstanovu(new VeleucilisteJave(nazivUstanove, listaKolegija, listaProfesora, listaStudenata, listaIspita));
+                    sveuciliste.dodajObrazovnuUstanovu(new VeleucilisteJave(1L,nazivUstanove, listaKolegija, listaProfesora, listaStudenata, listaIspita));
 
                 break;
                 case(2):
-                    sveuciliste.dodajObrazovnuUstanovu(new FakultetRacunarstva(nazivUstanove, listaKolegija, listaProfesora, listaStudenata, listaIspita));
+                    sveuciliste.dodajObrazovnuUstanovu(new FakultetRacunarstva(1L,nazivUstanove, listaKolegija, listaProfesora, listaStudenata, listaIspita));
                 break;
             }
 
@@ -143,8 +143,8 @@ public class Glavna {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             LocalDate datRodenja = LocalDate.parse(datumRodenja,formatter);
 
-            Student tempStudent = new Student(name,prezime,jmbag,datRodenja);
-            tempList.add(tempStudent);
+            //Student tempStudent = new Student(name,prezime,jmbag,datRodenja);
+           // tempList.add(tempStudent);
         }
 
         return tempList;
@@ -174,7 +174,7 @@ public class Glavna {
             System.out.println("Unesite sifru profesora");
             sifra = scan.nextLine();
 
-            Profesor tempProfesor = new Profesor.Builder(sifra).getIme(name).getPrezime(surname).getTitula(title).build();
+            Profesor tempProfesor = new Profesor.Builder().getSifra(sifra).getIme(name).getPrezime(surname).getTitula(title).build();
             tempList.add(tempProfesor);
         }
         return tempList;
@@ -218,7 +218,7 @@ public class Glavna {
             }
             int orderNumber = scan.nextInt() - 1;
             scan.nextLine();
-            Predmet tempPredmet = new Predmet(sifra,name,ects,listOfProfesor.get(orderNumber));
+            Predmet tempPredmet = new Predmet(1L,sifra,name,ects,listOfProfesor.get(orderNumber));
 
             if(mapaProfesora.containsKey(tempPredmet.getNositelj())) {
                 List<Predmet> listaKolegija = mapaProfesora.get(tempPredmet.getNositelj());
@@ -292,7 +292,7 @@ public class Glavna {
             String zgrada = scan.nextLine();
             Dvorana dvorana = new Dvorana(nazivDvorane,zgrada);
 
-            Ispit tempIspit = new Ispit(listOfPredmet.get(kolegijNumber),listOfStudent.get(studentNumber),ocjena,datumIspita,dvorana);
+            Ispit tempIspit = new Ispit(1l,listOfPredmet.get(kolegijNumber),listOfStudent.get(studentNumber),ocjena,datumIspita,dvorana);
             tempList.add(tempIspit);
 
             if (ocjena == 5)

@@ -6,13 +6,22 @@ package hr.java.vjezbe.entitet;
 public class Profesor extends Osoba{
 
     public static class Builder{
+        private Long id;
         private String ime;
         private String prezime;
         private String sifra;
         private String titula;
 
-        public Builder(String sifra){
+        public Builder(){
+
+        }
+        public Builder getId(Long id){
+            this.id = id;
+            return this;
+        }
+        public Builder getSifra(String sifra){
             this.sifra = sifra;
+            return this;
         }
         public Builder getIme(String ime){
             this.ime = ime;
@@ -27,7 +36,7 @@ public class Profesor extends Osoba{
             return this;
         }
         public Profesor build(){
-            Profesor profesor = new Profesor(this.ime,this.prezime);
+            Profesor profesor = new Profesor(this.ime,this.prezime,this.id);
             profesor.sifra = this.sifra;
             profesor.titula = this.titula;
             return profesor;
@@ -37,8 +46,8 @@ public class Profesor extends Osoba{
     private String titula;
 
 
-    private Profesor(String ime,String prezime){
-        super(ime,prezime);
+    private Profesor(String ime,String prezime,Long id){
+        super(ime,prezime,id);
     }
 
 
