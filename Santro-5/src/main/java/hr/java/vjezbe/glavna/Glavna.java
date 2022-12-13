@@ -99,7 +99,7 @@ public class Glavna {
                         flag = true;
                     }
                 }while(flag);
-                List<Ispit>listaIspitaStudenta = new ArrayList<>();
+                List<Ispit>listaIspitaStudenta;
                 BigDecimal ocjenaStudenta;
                 if(sveuciliste.dohvatiObrazovnuUstanovu(i) instanceof VeleucilisteJave){
                      listaIspitaStudenta = ((VeleucilisteJave)sveuciliste.dohvatiObrazovnuUstanovu(i)).filtrirajIspitePoStudentu(sveuciliste.dohvatiObrazovnuUstanovu(i).getIspiti(),student);

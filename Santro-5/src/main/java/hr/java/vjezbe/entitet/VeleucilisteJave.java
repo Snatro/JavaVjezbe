@@ -4,6 +4,7 @@ import hr.java.vjezbe.iznimke.NemoguceOdreditiProsjekStudentaException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Klasa za Veleučilište Java
  */
-public class VeleucilisteJave extends ObrazovnaUstanova implements Visokoskolska{
+public class VeleucilisteJave extends ObrazovnaUstanova implements Visokoskolska, Serializable {
 
     private static final Logger logger
             = LoggerFactory.getLogger(VeleucilisteJave.class);

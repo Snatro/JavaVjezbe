@@ -1,10 +1,12 @@
 package hr.java.vjezbe.entitet;
 
 
+import java.io.Serializable;
+
 /**
  * Klasa za kolegije
  */
-public class Predmet extends Entitet{
+public class Predmet extends Entitet implements Serializable {
 
     private String sifra;
     private String naziv;

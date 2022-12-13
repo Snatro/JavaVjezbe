@@ -1,12 +1,13 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
 /**
  * Sadrži gettere i settere Studenta
  */
-public class Student extends Osoba{
+public class Student extends Osoba implements Serializable {
 
     private String jmbag;
     private LocalDate datumRodenja;

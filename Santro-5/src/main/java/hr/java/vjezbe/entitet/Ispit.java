@@ -1,11 +1,12 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * Sadrži varijable za objekt Ispit
  */
-public final class Ispit extends Entitet implements Online {
+public final class Ispit extends Entitet implements Online, Serializable {
     private Predmet kolegij;
     private Student student;
     private Integer ocjena;

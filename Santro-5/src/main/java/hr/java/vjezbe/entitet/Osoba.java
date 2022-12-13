@@ -1,9 +1,12 @@
 package hr.java.vjezbe.entitet;
 
+import javax.naming.directory.SearchResult;
+import java.io.Serializable;
+
 /**
  * Abstraktna klasa za implementaciju u drugim klasama
  */
-public abstract class Osoba extends Entitet {
+public abstract class Osoba extends Entitet implements Serializable {
     private String ime;
     private String prezime;
 

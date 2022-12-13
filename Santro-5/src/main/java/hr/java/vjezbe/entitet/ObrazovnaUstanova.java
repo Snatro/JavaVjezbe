@@ -1,12 +1,13 @@
 package hr.java.vjezbe.entitet;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Klasa za ustanove
  */
-public abstract class ObrazovnaUstanova extends Entitet {
+public abstract class ObrazovnaUstanova extends Entitet implements Serializable {
 
     private String naziv;
     private List<Predmet> predmeti;

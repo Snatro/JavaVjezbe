@@ -1,9 +1,11 @@
 package hr.java.vjezbe.entitet;
 
+import java.io.Serializable;
+
 /**
  * Sadrži gettere i settere profesora
  */
-public class Profesor extends Osoba{
+public class Profesor extends Osoba implements Serializable {
 
     public static class Builder{
         private Long id;
